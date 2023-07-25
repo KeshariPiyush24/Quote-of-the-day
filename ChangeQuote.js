@@ -6,7 +6,7 @@ function fetchNewQuote() {
     fetch('https://api.quotable.io/random')
         .then(response => response.json())
         .then(data => {
-            quoteText.textContent = data.content;
+            quoteText.textContent = `"${data.content}"`;
             authorText.textContent = data.author;
         });
 }
